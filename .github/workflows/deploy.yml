@@ -7,13 +7,13 @@ on:
   workflow_dispatch:
 
 permissions:
-   contents: read
-   pages: write
-   id-tokens: write
+  contents: read
+  pages: write
+  id-tokens: write
 
-   concurrency:
-     group: ${{ github.workflow }}-${{ github.ref }}
-     cancel-in-progress: true
+  concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
   deploy:
